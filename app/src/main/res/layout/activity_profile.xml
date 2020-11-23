@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_background"
+
+        >
+
+        <ImageView
+            android:id="@+id/profile_backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/toolbar_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginLeft="75dp"
+            android:text="Profile"
+            android:textColor="@color/tab_active"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/image_profile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+
+            android:src="@drawable/male_photo" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/image_profile"
+
+            android:layout_alignRight="@+id/image_profile"
+            android:layout_alignBottom="@+id/image_profile"
+            android:background="@color/tab_active"
+            android:elevation="1dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/photocamera_black"
+            android:tint="@android:color/white"
+            app:backgroundTint="@color/tab_active" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+
+            >
+
+            <ImageView
+android:layout_marginTop="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+                android:src="@drawable/person_black_profile" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/profilr_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="5dp" />
+
+                    <ImageView
+                        android:id="@+id/profile_name_edit"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/name_edit"
+                        />
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/profilr_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:layout_marginStart="5dp"
+
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+
+                android:src="@drawable/info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/profilr_about"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="About"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        android:layout_marginStart="5dp"
+
+                        android:layout_marginLeft="5dp" />
+
+                    <ImageView
+                        android:id="@+id/profile_aboutedit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/name_edit"
+                        />
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/profilr_enterstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Status"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp"
+
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+android:layout_marginTop="10dp"
+                android:src="@drawable/call" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/profilr_phonenumber"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Phone Number"
+                        android:layout_marginStart="5dp"
+
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/profilr_phoneEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/name_edit"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/profilr_enternumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Phone Number"
+                    android:textColor="@android:color/black"
+                    android:layout_marginStart="5dp"
+
+                    android:layout_marginLeft="5dp"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
