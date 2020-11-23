@@ -1,2 +1,2 @@
 # WhatsAppClone
- Fully functional replica of Whatsapp in android  
+ Fully functional replica of WhatsApp in android
