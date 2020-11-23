@@ -1,28 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/tab_active"
     tools:context=".SplashScreenActivity">
-<ImageView
-    android:layout_width="75dp"
-    android:layout_height="75dp"
-    android:id="@+id/img_logo"
-    android:layout_centerHorizontal="true"
-android:layout_marginTop="200dp"
-    android:src="@drawable/whstapplogo_splashscreen"  />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/ic_whatsapp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trojans Welcomes You"
-        android:textSize="20dp"
-
-        android:layout_alignParentBottom="true"
-        android:textColor="@color/floating_message_create"
+        android:layout_below="@id/img_logo"
+        android:text="WhatsApp"
         android:layout_centerHorizontal="true"
-android:layout_marginBottom="100dp"
-        />
+        android:textSize="22dp"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="FROM TROJANS"
+        android:textColor="@color/green"
+        android:textSize="22sp" />
 
 </RelativeLayout>
