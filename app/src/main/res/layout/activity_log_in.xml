@@ -63,10 +63,9 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/smsGuideline">
 
-        <Spinner
-            android:layout_width="260dp"
-            android:layout_height="match_parent"
-            android:prompt="India" />
+<!--        <Spinner-->
+<!--            android:layout_width="260dp"-->
+<!--            android:layout_height="match_parent" />-->
     </LinearLayout>
 
     <LinearLayout
