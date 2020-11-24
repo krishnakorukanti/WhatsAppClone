@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/ic_whatsapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".activities.UserDataActivity"></activity>
+        <activity android:name=".AccountActivity" />
         <activity android:name=".activities.VerifyOtpActivity" />
         <activity android:name=".activities.LogInActivity" />
         <activity android:name=".activities.SplashScreenActivity">

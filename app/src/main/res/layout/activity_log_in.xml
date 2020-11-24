@@ -63,9 +63,9 @@
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/smsGuideline">
 
-<!--        <Spinner-->
-<!--            android:layout_width="260dp"-->
-<!--            android:layout_height="match_parent" />-->
+        <!--        <Spinner-->
+        <!--            android:layout_width="260dp"-->
+        <!--            android:layout_height="match_parent" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -83,18 +83,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
+            android:padding="10dp"
+            android:text="+91"
             android:textColor="@android:color/black"
             android:textSize="22sp" />
 
-        <EditText
-            android:id="@+id/tvCountryCode"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            android:hint="91"
-            android:inputType="number"
-            android:textColorHint="@android:color/black" />
 
         <EditText
             android:id="@+id/tvPhoneNumber"
@@ -126,6 +119,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/nextPhnBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
