@@ -19,24 +19,42 @@
 
     </com.hbb20.CountryCodePicker>
     <EditText
+        android:id="@+id/et_phone_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the Phone Number"
         android:textColorHint="@android:color/darker_gray"
         android:layout_marginTop="20dp"/>
     <EditText
+        android:id="@+id/et_otp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter the OTP "
         android:inputType="numberPassword"
         android:textColorHint="@android:color/darker_gray"
         android:layout_marginTop="20dp"/>
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Working"
+        android:visibility="invisible"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
     <Button
         android:id="@+id/btn_otp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="Get the Otp"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:id="@+id/btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Verify "
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>
