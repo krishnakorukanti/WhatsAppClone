@@ -1,11 +1,11 @@
-package com.example.whatsapp
+package com.example.whatsapp.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
+import com.example.whatsapp.R
 import com.hbb20.CountryCodePicker
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
         ccp!!.setOnCountryChangeListener(this)
         ccp!!.setDefaultCountryUsingNameCode("JP")
         btn_otp.setOnClickListener(View.OnClickListener {
-             val intent = Intent(this@MainActivity,ProfileActivity::class.java)
+             val intent = Intent(this@MainActivity, ProfileActivity::class.java)
                startActivity(intent)
         })
 
