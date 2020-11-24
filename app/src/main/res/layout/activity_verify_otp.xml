@@ -75,7 +75,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/numInText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -118,12 +117,6 @@
             android:text="Enter 6-digit code "
             android:textColor="#404142"
             android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/otpSumbitBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="sumbit otp" />
 
     </LinearLayout>
 
