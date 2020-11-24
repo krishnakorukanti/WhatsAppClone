@@ -1,5 +1,6 @@
 package com.example.whatsapp.activities
 
+<<<<<<< HEAD
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -51,3 +52,15 @@ class UserDataActivity : AppCompatActivity() {
         }
     }
 }
+=======
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.whatsapp.R
+
+class UserDataActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_user_data)
+    }
+}
+>>>>>>> b9f9828... # Authentication using Otp.
