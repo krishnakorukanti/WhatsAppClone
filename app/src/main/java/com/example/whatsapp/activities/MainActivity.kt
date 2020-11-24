@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
     private var phone_number: String? = null
     private var otp: String? = null
     private lateinit var auth: FirebaseAuth
-    private var VerificationCode: String? = null
+    private var VerificationCode: String?=null
+    private lateinit var ResendForce:PhoneAuthProvider.ForceResendingToken
     private  var mCallback: PhoneAuthProvider.OnVerificationStateChangedCallbacks? = null
 
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
         ccp!!.setOnCountryChangeListener(this)
         ccp!!.setDefaultCountryUsingNameCode("JP")
 
-        startFirebaseLogin()
+
 
         btn_otp.setOnClickListener(View.OnClickListener {
             countryCode = country_code_picker.textView_selectedCountry.toString()
@@ -47,10 +48,10 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
                 btn_otp.isEnabled = false
 
             } else {
-                val complete_phone: String = countryCode + "" + phone_number
+
                 btn_otp.isEnabled = true
                 val options = PhoneAuthOptions.newBuilder(auth)
-                    .setPhoneNumber(complete_phone)       // Phone number to verify
+                    .setPhoneNumber(phone_number!!)       // Phone number to verify
                     .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                     .setActivity(this)                 // Activity (for callback binding)
                     .setCallbacks(mCallback!!)          // OnVerificationStateChangedCallbacks
@@ -63,6 +64,26 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
             val credential = PhoneAuthProvider.getCredential(VerificationCode!!, otp!!)
             SigninWithPhone(credential);
         })
+        mCallback  = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
+                SigninWithPhone(phoneAuthCredential);
+                Toast.makeText(this@MainActivity, "verification completed", Toast.LENGTH_SHORT).show();
+            }
+
+            override fun onVerificationFailed(p0: FirebaseException) {
+                Toast.makeText(this@MainActivity, "verification failed", Toast.LENGTH_SHORT).show();
+            }
+
+            override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
+                super.onCodeSent(p0, p1)
+                VerificationCode = p0
+                ResendForce = p1
+                Toast.makeText(this@MainActivity, "Code sent", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+
+
 
 
 
@@ -83,24 +104,7 @@ class MainActivity : AppCompatActivity(),CountryCodePicker.OnCountryChangeListen
 
     }
 
-    private fun startFirebaseLogin() {
-        mCallback  = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-            override fun onVerificationCompleted(p0: PhoneAuthCredential) {
-                Toast.makeText(this@MainActivity, "verification completed", Toast.LENGTH_SHORT).show();
-            }
 
-            override fun onVerificationFailed(p0: FirebaseException) {
-                Toast.makeText(this@MainActivity, "verification failed", Toast.LENGTH_SHORT).show();
-            }
-
-            override fun onCodeSent(p0: String, p1: PhoneAuthProvider.ForceResendingToken) {
-                super.onCodeSent(p0, p1)
-                VerificationCode = p0
-                Toast.makeText(this@MainActivity, "Code sent", Toast.LENGTH_SHORT).show();
-            }
-
-        }
-    }
 
 
     override fun onCountrySelected() {
