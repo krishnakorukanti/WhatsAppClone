@@ -14,8 +14,15 @@
         android:orientation="vertical"
         android:theme="@style/ToolbarTheme"
         app:layout_constraintTop_toTopOf="parent"
+        app:title="WhatsApp"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    <include-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        layout="@layout/toolbar"/>-->
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"

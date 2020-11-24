@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_search"
+        android:iconTint="@android:color/white"
+        android:title="search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuOption"
+        android:title="MenuOptions"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/newGroup"
+        android:title="New Group" />
+
+    <item
+        android:id="@+id/newBroadcast"
+        android:title="New broadcast" />
+
+    <item
+        android:id="@+id/whatsAppWeb"
+        android:title="WhatsApp Web" />
+    <item
+        android:id="@+id/starredMessages"
+        android:title="Starred Messages" />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings" />
+
+</menu>
