@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "112622144737",
+    "firebase_url": "https://whatsapp-trojans.firebaseio.com",
+    "project_id": "whatsapp-trojans",
+    "storage_bucket": "whatsapp-trojans.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112622144737:android:40ec04463a567ab093fba0",
+        "android_client_info": {
+          "package_name": "com.example.whatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112622144737-864mn57fut924cl10jg6s6gn9l2e8jof.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzF_p0UFDEoYAV8I3EI1REz2sv7XVf_4U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112622144737-864mn57fut924cl10jg6s6gn9l2e8jof.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
