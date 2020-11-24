@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-
+import com.example.whatsapp.AccountActivity
 import com.example.whatsapp.R
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -15,7 +15,7 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         Handler().postDelayed({
-            startActivity(Intent(this, HomeActivity ::class.java))
+            startActivity(Intent(this, AccountActivity::class.java))
             finish()
         }, SPLACH_TIME)
     }
