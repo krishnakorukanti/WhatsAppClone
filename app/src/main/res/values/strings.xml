@@ -12,5 +12,6 @@
     <string name="error_unregister_carrier_number" translatable="false">EditText for carrier number is not registered. Register it using registerPhoneNumberTextView() before getFullNumber() or setFullNumber().</string>
 
 
+
     <string name="conversation_Notification">Play sounds for incoming and outgoing \n messages</string>
 </resources>
