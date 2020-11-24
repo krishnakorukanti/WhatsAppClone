@@ -14,6 +14,7 @@
 
         >
 
+
         <ImageView
             android:id="@+id/profile_backarrow"
             android:layout_width="wrap_content"
@@ -37,6 +38,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:id="@+id/show_image"
+            />
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/image_profile"
@@ -81,9 +88,9 @@
             >
 
             <ImageView
-android:layout_marginTop="10dp"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
+                android:layout_marginTop="10dp"
 
                 android:src="@drawable/person_black_profile" />
 
@@ -97,26 +104,23 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_marginStart="5dp"
-                        android:id="@+id/profilr_name"
+                    <EditText
+                        android:id="@+id/profile_name"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Name"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:hint="Name"
                         android:textColor="@android:color/black"
-                        android:textSize="15dp"
-                        android:layout_marginLeft="5dp" />
+                        android:textSize="15dp" />
 
                     <ImageView
                         android:id="@+id/profile_name_edit"
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/name_edit"
-                        />
-
-
+                        android:src="@drawable/name_edit" />
 
 
                 </LinearLayout>
@@ -125,12 +129,12 @@ android:layout_marginTop="10dp"
                     android:id="@+id/profilr_userName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="User Name"
                     android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
 
+                    android:text="User Name"
                     android:textColor="@android:color/black"
-                    android:textSize="15dp"
-                    android:layout_marginLeft="5dp" />
+                    android:textSize="15dp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -160,26 +164,23 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <EditText
                         android:id="@+id/profilr_about"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
                         android:text="About"
                         android:textColor="@android:color/black"
-                        android:textSize="15dp"
-                        android:layout_marginStart="5dp"
 
-                        android:layout_marginLeft="5dp" />
+                        android:textSize="15dp" />
 
                     <ImageView
                         android:id="@+id/profile_aboutedit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/name_edit"
-                        />
-
-
+                        android:src="@drawable/name_edit" />
 
 
                 </LinearLayout>
@@ -188,10 +189,10 @@ android:layout_marginTop="10dp"
                     android:id="@+id/profilr_enterstatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="User Status"
                     android:layout_marginStart="5dp"
-
                     android:layout_marginLeft="5dp"
+
+                    android:text="User Status"
                     android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
@@ -210,7 +211,7 @@ android:layout_marginTop="10dp"
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-android:layout_marginTop="10dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/call" />
 
             <LinearLayout
@@ -223,15 +224,15 @@ android:layout_marginTop="10dp"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <TextView
+                    <EditText
                         android:id="@+id/profilr_phonenumber"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="Phone Number"
                         android:layout_marginStart="5dp"
-
                         android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+
+                        android:text="Phone Number"
                         android:textColor="@android:color/black"
                         android:textSize="15dp" />
 
@@ -244,19 +245,17 @@ android:layout_marginTop="10dp"
                         />
 
 
-
-
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/profilr_enternumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="User Phone Number"
-                    android:textColor="@android:color/black"
                     android:layout_marginStart="5dp"
-
                     android:layout_marginLeft="5dp"
+                    android:text="User Phone Number"
+
+                    android:textColor="@android:color/black"
                     android:textSize="15dp" />
             </LinearLayout>
 

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 
 class SplashScreenActivity : AppCompatActivity() {
- private val SPLACH_TIME:Long=3000//1 sec
+ private val SPLACH_TIME:Long=1000//1 sec
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
