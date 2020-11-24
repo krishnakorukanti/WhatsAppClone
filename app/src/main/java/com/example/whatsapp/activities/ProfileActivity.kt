@@ -1,4 +1,4 @@
-package com.example.whatsapp
+package com.example.whatsapp.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.provider.MediaStore
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.whatsapp.R
 import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
@@ -18,7 +19,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         profile_name.setText("Shivraj")
         profilr_about.setText("King")
         profilr_phonenumber.setText("8904190446")
-camera.setOnClickListener(this)
+        camera.setOnClickListener(this)
         profile_name_edit.setOnClickListener(this)
         profile_aboutedit.setOnClickListener(this)
         profilr_phoneEdit.setOnClickListener(this)
@@ -35,10 +36,10 @@ camera.setOnClickListener(this)
                 }
 
             }
-            R.id.image_profile ->{
-                show_image.visibility=View.VISIBLE
+            R.id.image_profile -> {
+                show_image.visibility = View.VISIBLE
                 show_image.setImageResource(R.drawable.ic_whatsapp)
-show_image.visibility=View.GONE
+                show_image.visibility = View.GONE
 
             }
             R.id.profile_name_edit -> {
@@ -49,7 +50,7 @@ show_image.visibility=View.GONE
 
             }
             R.id.profile_aboutedit -> {
-                profilr_about.text=null
+                profilr_about.text = null
                 var about: String = profilr_about.text.toString()
                 profilr_about.setText(about)
 
@@ -65,7 +66,7 @@ show_image.visibility=View.GONE
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        when(requestCode) {
+        when (requestCode) {
             CAMERA_REQUEST_CODE -> {
                 if (resultCode == Activity.RESULT_OK && data != null) {
                     image_profile.setImageBitmap(data.extras?.get("data") as Bitmap)
