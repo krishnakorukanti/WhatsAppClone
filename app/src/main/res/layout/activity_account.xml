@@ -126,6 +126,33 @@
         android:layout_height="wrap_content"
         >
         <ImageView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/phone"
+            android:text="Change  Number"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp" />
+
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
             android:id="@+id/request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -137,7 +164,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/request"
-            android:text="Two-step Verification"
+            android:text="Request account info"
             android:layout_marginTop="30dp"
             android:layout_marginStart="20dp"
             android:textColor="@android:color/black"
@@ -164,7 +191,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/delet"
-            android:text="Two-step Verification"
+            android:text="Delet my account"
             android:layout_marginTop="30dp"
             android:layout_marginStart="20dp"
             android:textColor="@android:color/black"
