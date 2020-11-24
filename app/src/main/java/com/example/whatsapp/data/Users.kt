@@ -2,9 +2,9 @@ package com.example.whatsapp.data
 
 data class Users(
     val profileName: String,
-    val profilePhone: Int,
+    val profilePhone: String,
     val profileAbout: String,
     val profileId: String
 ) {
-    constructor() : this("", 0, "", "")
+    constructor() : this("", "", "", "")
 }
