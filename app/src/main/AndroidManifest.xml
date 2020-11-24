@@ -12,8 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_whatsapp"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.VerifyOtpActivity"></activity>
+        <activity android:name=".activities.LogInActivity" />
         <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,10 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HomeActivity"/>
-        <activity android:name=".activities.MainActivity"/>
-        <activity android:name=".activities.ProfileActivity"/>
-        <activity android:name=".activities.SettingActivity"/>
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.SettingActivity" />
     </application>
 
 </manifest>
