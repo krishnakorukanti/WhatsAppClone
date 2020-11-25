@@ -1,5 +1,6 @@
 package com.example.whatsapp.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whatsapp.R
 import com.example.whatsapp.RecyclerViewItemClicked
+import com.example.whatsapp.activities.ChatActivity
 import com.example.whatsapp.activities.HomeActivity
 import com.example.whatsapp.adapter.ChatsAdapter
 import com.example.whatsapp.data.Users
@@ -69,7 +71,8 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
         }
     }
     override fun onItemClicked(position: Int, data: Any) {
-
+    val intent = Intent(activity,ChatActivity::class.java)
+        startActivity(intent)
     }
 
 
