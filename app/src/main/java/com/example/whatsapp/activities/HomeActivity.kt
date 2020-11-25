@@ -1,38 +1,40 @@
 package com.example.whatsapp.activities
 
 import android.os.Bundle
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.ViewPager
 import com.example.whatsapp.R
-import com.example.whatsapp.ViewPagerAdapter
-import com.example.whatsapp.adapter.CallsAdapter
-import kotlinx.android.synthetic.main.activity_home.*
+import com.example.whatsapp.adapter.ViewPagerAdapter
 
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        view_pager.adapter = ViewPagerAdapter(supportFragmentManager)
 
-        tabs.setupWithViewPager(view_pager)
+        val viewPager = findViewById<ViewPager>(R.id.view_pager)
+        if (viewPager != null) {
+            val adapter = ViewPagerAdapter(supportFragmentManager)
+            viewPager.adapter = adapter
+        }
 
 
-
-       /* setViewPagerAdapter()
+        setViewPagerAdapter()
         val toolbar = findViewById(R.id.toolbar) as Toolbar?
         setSupportActionBar(toolbar)
         toolbar?.title = "WhatsApp"
-*/
+
     }
 
-   /* private fun setViewPagerAdapter() {
+    private fun setViewPagerAdapter() {
 
-    }*/
+    }
 
-   /* override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val menuInflater = menuInflater
         menuInflater.inflate(R.menu.menu_settings, menu)
         return true
-    }*/
+    }
 }
