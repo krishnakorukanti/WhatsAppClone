@@ -4,13 +4,22 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.viewpager.widget.ViewPager
 import com.example.whatsapp.R
+import com.example.whatsapp.adapter.ViewPagerAdapter
 
 class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        val viewPager = findViewById<ViewPager>(R.id.view_pager)
+        if (viewPager != null) {
+            val adapter = ViewPagerAdapter(supportFragmentManager)
+            viewPager.adapter = adapter
+        }
+
 
         setViewPagerAdapter()
         val toolbar = findViewById(R.id.toolbar) as Toolbar?
