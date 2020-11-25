@@ -2,32 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.whatsapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_whatsapp"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_whatsapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.TermPolicyActivity"></activity>
-        <activity android:name=".activities.ContactUsActivity" />
-        <activity android:name=".activities.FAQActivity" />
-        <activity android:name=".activities.HelpActivity" />
-        <activity android:name=".activities.SettingActivity"></activity>
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.VerifyOtpActivity"></activity>
+        <activity android:name=".activities.LogInActivity" />
+        <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.SettingActivity" />
     </application>
 
 </manifest>
