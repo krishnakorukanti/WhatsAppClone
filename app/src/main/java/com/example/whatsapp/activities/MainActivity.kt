@@ -75,13 +75,7 @@ class MainActivity : AppCompatActivity(), CountryCodePicker.OnCountryChangeListe
     private fun sendVerificationCode() {
 
 
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            "+916300675220",
-            60,
-            TimeUnit.SECONDS,
-            TaskExecutors.MAIN_THREAD,
-            mCallbacks
-        )
+
     }
 
 
