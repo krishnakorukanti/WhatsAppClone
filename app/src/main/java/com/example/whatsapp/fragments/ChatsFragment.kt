@@ -71,8 +71,12 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
         }
     }
     override fun onItemClicked(position: Int, data: Any) {
-    val intent = Intent(activity,ChatActivity::class.java)
-        startActivity(intent)
+        if (data is Users){
+            val intent = Intent(activity,ChatActivity::class.java)
+            intent.putExtra("chats",data.profileId)
+            startActivity(intent)
+        }
+
     }
 
 
