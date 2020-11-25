@@ -11,7 +11,7 @@
         android:roundIcon="@drawable/ic_whatsapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ChatActivity"></activity>
+        <activity android:name=".activities.ChatActivity" />
         <activity android:name=".activities.UserDataActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".activities.VerifyOtpActivity" />
@@ -23,7 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.HomeActivity" >
+
+
+        </activity>
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.SettingActivity" />
