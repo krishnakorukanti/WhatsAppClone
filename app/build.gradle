@@ -69,4 +69,5 @@ dependencies {
     implementation 'com.devlomi.record-view:record-view:2.0.1'
     // countryCode Picker
     implementation 'com.hbb20:ccp:2.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
