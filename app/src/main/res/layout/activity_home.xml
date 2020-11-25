@@ -35,12 +35,12 @@
         app:tabSelectedTextColor="@color/tab_active"
         app:tabTextColor="@color/tab_inactive">
 
-        <com.google.android.material.tabs.TabItem
+      <!--  <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_camera_alt_black_24dp" />
-
-        <com.google.android.material.tabs.TabItem
+-->
+      <!--  <com.google.android.material.tabs.TabItem
             android:id="@+id/chat_tab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,11 +54,11 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CALLS" />
+            android:text="CALLS" />&ndash;&gt;-->
 
-    </com.google.android.material.tabs.TabLayout>
+   </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/tool2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/contact_img_2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/john_1" />
+
+        <TextView
+            android:id="@+id/contact_name_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/contact_img_2"
+            android:text="John"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320dp"
+            android:layout_marginTop="20sp"
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:layout_marginLeft="320dp" />
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/contact_img_2"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
