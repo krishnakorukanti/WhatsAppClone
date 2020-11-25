@@ -13,6 +13,7 @@ import com.example.whatsapp.adapter.ChatsAdapter
 import com.example.whatsapp.data.Users
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.fragment_chats.*

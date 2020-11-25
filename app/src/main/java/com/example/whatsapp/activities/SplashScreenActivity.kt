@@ -16,7 +16,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        auth = Firebase.auth
+       auth = Firebase.auth
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
         Handler(mainLooper).postDelayed({
@@ -24,10 +24,10 @@ class SplashScreenActivity : AppCompatActivity() {
             /* Check if the user is already signed In, If yes directly show me all the participants screen
             or else navigate him to Login screen
             */
-            if (auth.currentUser != null) {
+           if (auth.currentUser != null) {
                 val intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
                 startActivity(intent)
-            } else {
+           } else {
                 val intent = Intent(this@SplashScreenActivity, LogInActivity::class.java)
                 startActivity(intent)
             }
