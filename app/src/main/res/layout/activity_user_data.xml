@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/profile_backarrow"
+                android:id="@+id/nextHomeBtn"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 android:id="@+id/toolbar_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
                 android:text="Profile"
                 android:textColor="@color/tab_active"
                 android:textSize="22sp"
@@ -110,7 +110,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/profile_name"
+                        android:id="@+id/profileNameUser"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
@@ -170,7 +170,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/profilr_about"
+                        android:id="@+id/profileAbout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
@@ -229,8 +229,8 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/profilr_phonenumber"
+                    <TextView
+                        android:id="@+id/profileNumber"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
