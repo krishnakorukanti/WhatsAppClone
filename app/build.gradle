@@ -61,7 +61,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 
     implementation 'com.google.firebase:firebase-auth:19.3.0'
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     //Zoom ImageView
     implementation 'com.jsibbold:zoomage:1.2.0'
