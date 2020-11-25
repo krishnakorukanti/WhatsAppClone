@@ -10,17 +10,19 @@ import com.example.whatsapp.R
 import com.example.whatsapp.RecyclerViewItemClicked
 import com.example.whatsapp.adapter.ChatsAdapter
 import com.example.whatsapp.data.Users
+
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
+
 import kotlinx.android.synthetic.main.activity_chat.*
 
 
 class ChatsFragment : Fragment(), RecyclerViewItemClicked {
-    private lateinit var databaseReference: DatabaseReference
+      private lateinit var databaseReference: DatabaseReference
     private var userList = mutableListOf<Users>()
 
-    override fun onCreateView(
+   override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -32,20 +34,20 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users")
+        //  databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 
         /**
          * Get the node where the users are stored in database and fetch all the users and display it
          * in a recycler view where a user can click a particular participant and start chatting
          */
-        databaseReference.addValueEventListener(object : ValueEventListener {
+         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 userList.clear()
                 for (i in snapshot.children) {
                     val user: Users = i.getValue(Users::class.java)!!
-                    /*
-                    Do not show yourself into the participant list
-                     */
+
+                  /*  Do not show yourself into the participant list*/
+
                     if (user.profileId != Firebase.auth.currentUser?.uid) {
                         userList.add(user)
                     }
@@ -57,7 +59,7 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
 
         })
     }
-    private fun setAdapter() {
+         private fun setAdapter() {
         val linearLayoutManager = LinearLayoutManager(context)
         val userAdapter = ChatsAdapter(userList, this)
         recyclerView.apply {
@@ -70,4 +72,5 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
     }
 
 
+    }
 }

@@ -21,19 +21,21 @@ class ViewPagerAdapter(
     }
 
     override fun getItem(position: Int): Fragment {
-   when(position){
-       0 -> {
-           return ChatsFragment()
-       }
-       1 -> {
-           return StatusFragment()
-       }
-       2 -> {
-          return CallsFragment()
-       }else ->{
-       return ChatsFragment()
-   }
-   }
+        when (position) {
+            0 -> {
+                  return ChatsFragment()
+            }
+            1 -> {
+                return StatusFragment()
+            }
+            2 -> {
+                return CallsFragment()
+            }
+            else -> {
+                return CallsFragment()
+            }
+        }
+        return CallsFragment()
 
     }
 

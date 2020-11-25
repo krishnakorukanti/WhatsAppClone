@@ -9,8 +9,10 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.TaskExecutors
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.*
+
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 import kotlinx.android.synthetic.main.activity_verify_otp.*
 import java.util.concurrent.TimeUnit
 

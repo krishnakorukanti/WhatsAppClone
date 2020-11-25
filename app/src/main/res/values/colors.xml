@@ -13,6 +13,7 @@
     <color name="message_input_button_inactive">@color/gray</color>
     <color name="floating_message_send">@color/green_dark</color>
     <color name="colorAccent">#2196F3</color>
+    <color name="gains_boro">#DCDCDC</color>
 
     <!-- Palette Greens -->
     <color name="green_lightest">#e2ffc7</color>
