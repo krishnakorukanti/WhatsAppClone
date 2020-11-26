@@ -21,6 +21,7 @@ class UserDataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_data)
         auth = Firebase.auth
+        profileNumber.text = auth.currentUser?.phoneNumber.toString()
         nextHomeBtn.setOnClickListener {
             if (profileAbout.text.isEmpty()||profileNameUser.text.isEmpty()){
                 Toast.makeText(this@UserDataActivity,"Invalid Entry",Toast.LENGTH_LONG).show()

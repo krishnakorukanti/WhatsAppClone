@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activities.ProfileActivity">
+    android:background="@color/background"
+    tools:context=".activities.UserDataActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
                 android:id="@+id/nextHomeBtn"
                 android:layout_width="wrap_content"
                 android:layout_alignParentEnd="true"
+                android:outlineSpotShadowColor="@color/gray"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_navigate_next_24"
                 android:layout_alignParentRight="true" />
@@ -58,7 +60,8 @@
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
 
-            android:src="@drawable/male_photo" />
+
+            android:src="@drawable/masaischhol" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -239,15 +242,9 @@
 
                         android:text="Phone Number"
                         android:textColor="@android:color/black"
-                        android:textSize="15dp" />
+                        android:textSize="20sp" />
 
-                    <ImageView
-                        android:id="@+id/profilr_phoneEdit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/name_edit"
 
-                        />
 
 
                 </LinearLayout>
