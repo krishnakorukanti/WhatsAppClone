@@ -26,7 +26,7 @@
             android:id="@+id/circle_image"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/ic_whatsapp" />
+            android:src="@drawable/masaischhol" />
 
 
         <TextView

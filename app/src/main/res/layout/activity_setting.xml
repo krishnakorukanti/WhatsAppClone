@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".activities.SettingActivity">
 
     <LinearLayout
@@ -72,12 +73,12 @@
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/toolbarGuideline">
 
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/ivSettingsProfile"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
-                    android:src="@drawable/ic_account_icon" />
+                    android:src="@drawable/masaischhol" />
 
                 <LinearLayout
                     android:id="@+id/profile_click"

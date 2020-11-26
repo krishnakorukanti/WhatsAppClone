@@ -57,7 +57,10 @@ class ChatActivity : AppCompatActivity() {
         })
 
         btnSendMsg.setOnClickListener {
-
+            if (typeMsg.text.isEmpty()){
+                typeMsg.error = "Can't Send Blank Text"
+                return@setOnClickListener
+            }
             val chatsMessage = Chats(
                 typeMsg.text.toString().trim(),
                 System.currentTimeMillis().toString(),

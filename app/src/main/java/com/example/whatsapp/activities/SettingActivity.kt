@@ -9,12 +9,21 @@ import android.widget.LinearLayout
 import com.example.whatsapp.AccountActivity
 import com.example.whatsapp.NotificationActivity
 import com.example.whatsapp.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_setting.*
 
 class SettingActivity : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
+        auth = Firebase.auth
+        tvSettingsUserName.text = auth.currentUser?.phoneNumber
 
         account_layout.setOnClickListener(View.OnClickListener {
             val intent1=Intent(this,AccountActivity::class.java)
