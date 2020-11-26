@@ -40,7 +40,7 @@ class ChatActivity : AppCompatActivity() {
                     Do not show yourself into the participant list
                      */
                     if (user.profileId == receiverId) {
-                        toolBarName.text = user.profileName`
+                        toolBarName.text = user.profileName
                     }
                 }
 
