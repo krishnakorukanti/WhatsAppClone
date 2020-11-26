@@ -1,13 +1,14 @@
 package com.example.whatsapp.activities
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whatsapp.R
 import com.example.whatsapp.adapter.ChatScreenAdapter
 import com.example.whatsapp.data.Chats
 import com.example.whatsapp.data.Users
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
@@ -23,6 +24,10 @@ class ChatActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
+        profile_backarrow.setOnClickListener(View.OnClickListener {
+            val intent_home = Intent(this, HomeActivity::class.java)
+            startActivity(intent_home)
+        })
         setRecyclerAdapter()
         receiverId = intent.getStringExtra("chats")
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
@@ -33,7 +38,7 @@ class ChatActivity : AppCompatActivity() {
          */
         databaseReference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-               // userList.clear()
+                // userList.clear()
                 for (i in snapshot.children) {
                     val user: Users = i.getValue(Users::class.java)!!
                     /*
@@ -64,6 +69,7 @@ class ChatActivity : AppCompatActivity() {
         }
         readMessages()
     }
+
     private fun readMessages() {
         FirebaseDatabase.getInstance().getReference("messages")
             .addValueEventListener(object : ValueEventListener {
@@ -96,6 +102,7 @@ class ChatActivity : AppCompatActivity() {
 
             })
     }
+
     private fun setRecyclerAdapter() {
         val linearLayoutManager = LinearLayoutManager(this)
         chatAdapter = ChatScreenAdapter(chatList)
