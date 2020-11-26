@@ -37,4 +37,5 @@ class HomeActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_settings, menu)
         return true
     }
+
 }
