@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/ic_whatsapp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ChatActivity"></activity>
+        <activity android:name=".Status_ImageActivity"></activity>
+        <activity android:name=".activities.ChatActivity" />
         <activity android:name=".activities.UserDataActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".activities.VerifyOtpActivity" />
