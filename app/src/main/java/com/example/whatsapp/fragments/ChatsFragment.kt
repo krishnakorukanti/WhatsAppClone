@@ -80,4 +80,5 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
     }
 
 
+
 }
