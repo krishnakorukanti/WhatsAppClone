@@ -3,6 +3,7 @@ package com.example.whatsapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.whatsapp.R
 import com.example.whatsapp.data.Users
@@ -24,9 +25,10 @@ class UserDataActivity : AppCompatActivity() {
         nextHomeBtn.setOnClickListener {
             if (profileAbout.text.isEmpty()||profileNameUser.text.isEmpty()){
                 Toast.makeText(this@UserDataActivity,"Invalid Entry",Toast.LENGTH_LONG).show()
-
+                flProgressBarProfile.visibility = View.VISIBLE
             }else{
                 updateFirebaseDatabase()
+                flProgressBarProfile.visibility = View.VISIBLE
             }
         }
 
