@@ -3,6 +3,7 @@ package com.example.whatsapp.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.whatsapp.R
 import kotlinx.android.synthetic.main.activity_log_in.*
 
