@@ -7,6 +7,10 @@
     android:background="@color/background"
     tools:context=".activities.HomeActivity">
 
+    <!--    <include-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        layout="@layout/toolbar"/>-->
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -17,13 +21,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="WhatsApp"
         app:titleTextAppearance="@style/Toolbar.TitleText"
-        app:titleTextColor="@android:color/white">
+        app:titleTextColor="@android:color/white"
+        tools:layout_editor_absoluteX="85dp">
+
+
+
+
 
     </androidx.appcompat.widget.Toolbar>
 
-    <!--    <include-->
-    <!--        android:id="@+id/toolbar"-->
-    <!--        layout="@layout/toolbar"/>-->
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+app:layout_constraintEnd_toEndOf="@id/guideline"
+
+        >
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/three_dot"
+            android:padding="15dp"
+            android:background="@android:color/transparent"/>
+<!--            android:src="@drawable/ic_more_vert_black"-->
+
+            />
+    </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
@@ -66,5 +91,12 @@
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
