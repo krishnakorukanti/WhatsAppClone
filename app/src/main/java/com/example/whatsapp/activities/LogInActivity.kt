@@ -11,6 +11,11 @@ class LogInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
+
+        tvPhoneNumber.setOnClickListener {
+            flProgressBarLogIn.visibility = View.GONE
+        }
+
         nextPhnBtn.setOnClickListener {
             if (tvPhoneNumber.text.length<10){
                 tvPhoneNumber.error = "Invalid Number"
