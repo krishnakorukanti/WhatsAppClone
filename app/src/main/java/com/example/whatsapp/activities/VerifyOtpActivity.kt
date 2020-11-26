@@ -35,11 +35,17 @@ class VerifyOtpActivity : AppCompatActivity() {
         tvInputOtp.setOnClickListener {
             flProgressBar.visibility = View.GONE
         }
+
+        otpSumbitBtn.setOnClickListener {
+            flProgressBar.visibility = View.VISIBLE
+        }
+
         otpSumbitBtn.setOnClickListener {
             if (tvInputOtp.text.isEmpty()){
                 tvInputOtp.error = "Invalid OTP"
             }else{
                 verifyCode(tvInputOtp.text.toString())
+                flProgressBar.visibility = View.VISIBLE
             }
         }
 
