@@ -13,6 +13,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whatsapp.R
+import com.example.whatsapp.activities.MainActivity
+import com.example.whatsapp.activities.Status_ImageActivity
 import com.example.whatsapp.adapter.StatusAdapter
 import com.example.whatsapp.data.Status_1
 import com.google.android.material.snackbar.Snackbar
@@ -20,6 +22,7 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.StreamDownloadTask
 import com.google.firebase.storage.UploadTask
+
 import com.google.firebase.storage.UploadTask.TaskSnapshot
 import kotlinx.android.synthetic.main.fragment_calls.recycler_view
 import kotlinx.android.synthetic.main.fragment_status.*
@@ -31,6 +34,7 @@ class StatusFragment : Fragment() {
     private lateinit var imageUri: Uri
     private lateinit var storage:FirebaseStorage
     private lateinit var storageReference:StorageReference
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,6 +55,10 @@ class StatusFragment : Fragment() {
         contact_img_triple.setOnClickListener(View.OnClickListener {
             choosePicture()
         })
+        contact_triple_name.setOnClickListener {
+            img_upload.visibility = View.VISIBLE
+              img_upload.setImageURI(imageUri)
+        }
     }
 
     private fun choosePicture() {
@@ -66,6 +74,13 @@ class StatusFragment : Fragment() {
             imageUri = data.getData()!!
             contact_img_triple.setImageURI(imageUri)
             uploadPicture()
+           /* if (imageUri!=null){
+
+                val intent_image = Intent(this.context,Status_ImageActivity::class.java)
+
+                intent_image.putExtra("image_pass",imageUri)
+                startActivity(intent_image)
+            }*/
         }
     }
 
@@ -83,6 +98,8 @@ class StatusFragment : Fragment() {
               //  val downloadUrl: Uri = taskSnapshot.uploadSessionUri!!
                 pd.dismiss()
                 Toast.makeText(this.context,"Image is Uploaded",Toast.LENGTH_SHORT).show()
+
+
             }
             .addOnFailureListener {
                 // Handle unsuccessful uploads
@@ -113,6 +130,12 @@ class StatusFragment : Fragment() {
         modelList.add(Status_1(R.drawable.john_1, "John"))
         modelList.add(Status_1(R.drawable.john_1, "John"))
 
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        val intent_open = Intent(this.context,MainActivity::class.java)
+        startActivity(intent_open)
     }
 
 }

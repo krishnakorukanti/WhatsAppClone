@@ -17,6 +17,14 @@
             android:layout_height="60dp"
             android:layout_margin="20dp"
             android:src="@drawable/gourav" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           android:id="@+id/img_upload"
+
+            android:visibility="gone"
+            />
+
 
         <TextView
             android:id="@+id/contact_triple_name"

@@ -1,4 +1,4 @@
-package com.example.whatsapp.activities
+ package com.example.whatsapp.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -24,13 +24,13 @@ class SplashScreenActivity : AppCompatActivity() {
             /* Check if the user is already signed In, If yes directly show me all the participants screen
             or else navigate him to Login screen
             */
-           if (auth.currentUser != null) {
+          // if (auth.currentUser != null) {
                 val intent = Intent(this@SplashScreenActivity, HomeActivity::class.java)
                 startActivity(intent)
-           } else {
+         /*  } else {
                 val intent = Intent(this@SplashScreenActivity, LogInActivity::class.java)
                 startActivity(intent)
-            }
+            }*/
             finish()
         }, 3000)
     }

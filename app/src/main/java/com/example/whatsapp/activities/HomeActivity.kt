@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.example.whatsapp.R
 import com.example.whatsapp.adapter.ViewPagerAdapter
+import com.example.whatsapp.fragments.StatusFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -15,6 +16,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val viewPager = findViewById<ViewPager>(R.id.view_pager)
+        val statusFragment = StatusFragment()
+
         if (viewPager != null) {
             val adapter = ViewPagerAdapter(supportFragmentManager)
             viewPager.adapter = adapter
