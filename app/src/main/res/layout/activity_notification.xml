@@ -21,7 +21,7 @@
 
 
             <ImageView
-                android:id="@+id/profile_backarrow"
+                android:id="@+id/profile_backarrow_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/backarrow" />

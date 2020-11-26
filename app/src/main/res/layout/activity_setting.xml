@@ -51,6 +51,8 @@
         app:layout_constraintTop_toBottomOf="@id/toolbarGuideline">
 
         <LinearLayout
+
+            android:id="@+id/helper_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -134,6 +136,7 @@
                     android:src="@drawable/ic_account_key" />
 
                 <LinearLayout
+                    android:id="@+id/account_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -246,6 +249,7 @@
                     android:src="@drawable/ic_notification_settings" />
 
                 <LinearLayout
+                    android:id="@+id/notification_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -358,6 +362,7 @@
                     android:src="@drawable/ic_help_settings" />
 
                 <LinearLayout
+                    android:id="@+id/help_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -396,6 +401,7 @@
                 app:layout_constraintGuide_begin="480dp" />
 
             <LinearLayout
+
                 android:id="@+id/llInviteFriend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
