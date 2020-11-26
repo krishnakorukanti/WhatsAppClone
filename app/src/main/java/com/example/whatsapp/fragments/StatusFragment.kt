@@ -129,8 +129,11 @@ class StatusFragment : Fragment() {
         modelList.add(Status_1(R.drawable.john_1, "John"))
         modelList.add(Status_1(R.drawable.john_1, "John"))
         modelList.add(Status_1(R.drawable.john_1, "John"))
-
     }
+
+
+
+   
 
     override fun onDestroy() {
         super.onDestroy()
