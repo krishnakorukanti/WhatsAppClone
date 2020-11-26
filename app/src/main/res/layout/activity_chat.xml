@@ -66,16 +66,12 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerChatCon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/toolbarChats" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:id="@+id/llType"
         android:layout_margin="10dp"
         android:background="@drawable/type_message"
         android:orientation="horizontal">
@@ -119,6 +115,15 @@
 
 
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChatCon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llType"
+        android:layout_marginBottom="5dp"
+
+        android:layout_below="@id/toolbarChats" />
+
 
 
 </RelativeLayout>
