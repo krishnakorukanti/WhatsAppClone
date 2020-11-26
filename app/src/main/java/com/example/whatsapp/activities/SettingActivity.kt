@@ -25,6 +25,10 @@ class SettingActivity : AppCompatActivity() {
             val intent1=Intent(this,NotificationActivity::class.java)
             startActivity(intent1)
         })
+        profile_click.setOnClickListener(View.OnClickListener {
+            val intent=Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
+        })
 
         val llInviteFriend = findViewById<LinearLayout>(R.id.llInviteFriend)
         llInviteFriend.setOnClickListener {

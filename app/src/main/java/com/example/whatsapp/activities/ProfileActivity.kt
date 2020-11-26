@@ -13,16 +13,21 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
     val CAMERA_REQUEST_CODE = 0
+    var img:String=""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_profile)
         profile_name.setText("Shivraj")
-        profilr_about.setText("King")
+        profilr_about.setText("Welcome ")
         profilr_phonenumber.setText("8904190446")
         camera.setOnClickListener(this)
         profile_name_edit.setOnClickListener(this)
         profile_aboutedit.setOnClickListener(this)
         profilr_phoneEdit.setOnClickListener(this)
+image_profile.setOnClickListener(this)
+        btn_profile_backarrow.setOnClickListener(this)
+        show_image.setOnClickListener(this)
         image_profile.setOnClickListener(this)
 
     }
@@ -38,8 +43,8 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.image_profile -> {
                 show_image.visibility = View.VISIBLE
-                show_image.setImageResource(R.drawable.ic_whatsapp)
-                show_image.visibility = View.GONE
+               // show_image.setImageBitmap()
+               // show_image.visibility = View.GONE
 
             }
             R.id.profile_name_edit -> {
@@ -60,15 +65,29 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
                 var phone_number = profilr_phonenumber.text
                 profilr_phonenumber.setText(phone_number)
             }
+            R.id.btn_profile_backarrow ->{
+                val intent1=Intent(this@ProfileActivity,SettingActivity::class.java)
+                startActivity(intent1)
+            }
+//R.id.image_profile ->{
+//    show_image.visibility=View.VISIBLE
+
 
         }
+
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent=Intent(this,SettingActivity::class.java)
+        startActivity(intent)
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
             CAMERA_REQUEST_CODE -> {
                 if (resultCode == Activity.RESULT_OK && data != null) {
+                    img= image_profile.setImageBitmap(data.extras?.get("data") as Bitmap).toString()
                     image_profile.setImageBitmap(data.extras?.get("data") as Bitmap)
                 }
             }
@@ -77,4 +96,5 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
 }

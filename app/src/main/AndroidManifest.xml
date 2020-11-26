@@ -32,6 +32,11 @@
         <activity android:name=".NotificationActivity"/>
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.SettingActivity" />
+        <activity android:name=".activities.HelpActivity"/>
+        <activity android:name=".activities.FAQActivity"/>
+        <activity android:name=".activities.TermPolicyActivity"/>
+        <activity android:name=".activities.ContactUsActivity"/>
+
 
     </application>
 
