@@ -38,12 +38,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <ImageView
+            android:id="@+id/show_image"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:visibility="gone"
-            android:id="@+id/show_image"
-            />
+            android:visibility="gone" />
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/image_profile"

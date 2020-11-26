@@ -2,6 +2,7 @@ package com.example.whatsapp.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.whatsapp.R
@@ -30,11 +31,21 @@ class VerifyOtpActivity : AppCompatActivity() {
         numInText.text = phoneNum
         phoneNumberRec = phoneNum
         sendVerificationCode()
+
+        tvInputOtp.setOnClickListener {
+            flProgressBar.visibility = View.GONE
+        }
+
+        otpSumbitBtn.setOnClickListener {
+            flProgressBar.visibility = View.VISIBLE
+        }
+
         otpSumbitBtn.setOnClickListener {
             if (tvInputOtp.text.isEmpty()){
                 tvInputOtp.error = "Invalid OTP"
             }else{
                 verifyCode(tvInputOtp.text.toString())
+                flProgressBar.visibility = View.VISIBLE
             }
         }
 

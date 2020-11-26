@@ -8,12 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whatsapp.R
 import com.example.whatsapp.RecyclerViewItemClicked
+import com.example.whatsapp.activities.HomeActivity
 import com.example.whatsapp.adapter.ChatsAdapter
 import com.example.whatsapp.data.Users
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_chat.*
+import kotlinx.android.synthetic.main.fragment_chats.*
 
 
 class ChatsFragment : Fragment(), RecyclerViewItemClicked {
@@ -50,6 +52,7 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
                         userList.add(user)
                     }
                 }
+                setAdapter()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -58,9 +61,9 @@ class ChatsFragment : Fragment(), RecyclerViewItemClicked {
         })
     }
     private fun setAdapter() {
-        val linearLayoutManager = LinearLayoutManager(context)
+        val linearLayoutManager = LinearLayoutManager(activity)
         val userAdapter = ChatsAdapter(userList, this)
-        recyclerView.apply {
+        recyclerChats.apply {
             layoutManager = linearLayoutManager
             adapter = userAdapter
         }
