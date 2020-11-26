@@ -17,6 +17,7 @@
         <activity android:name=".activities.VerifyOtpActivity" />
         <activity android:name=".activities.LogInActivity" />
         <activity android:name=".activities.SplashScreenActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,6 +32,7 @@
         <activity android:name=".NotificationActivity"/>
         <activity android:name=".activities.ProfileActivity" />
         <activity android:name=".activities.SettingActivity" />
+
     </application>
 
 </manifest>

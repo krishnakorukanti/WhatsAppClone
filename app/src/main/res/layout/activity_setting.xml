@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.SettingsActivity">
+    tools:context=".activities.SettingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbarGuideline">
 
@@ -76,7 +75,7 @@
                 <ImageView
                     android:id="@+id/ivSettingsProfile"
                     android:layout_width="100dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
                     android:src="@drawable/ic_account_icon" />
 
@@ -102,7 +101,7 @@
                     <TextView
                         android:id="@+id/tvSettingsUserBio"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginLeft="15dp"
                         android:text="Hey there! I'm using WhatsApp."
                         android:textColor="#504D4D"
