@@ -26,7 +26,6 @@
             android:id="@+id/circle_image"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_margin="15dp"
             android:src="@drawable/ic_whatsapp" />
 
 
@@ -34,7 +33,7 @@
             android:id="@+id/toolBarName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="15dp"
             android:layout_marginLeft="75dp"
             android:text="Any Name"
             android:textColor="@color/tab_active"
@@ -42,27 +41,25 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:src="@drawable/video" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="80dp"
+            android:src="@drawable/video"
+            android:layout_marginLeft="80dp" />
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/chat_call" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+      android:layout_marginStart="15dp"
+            android:src="@drawable/chat_call"
+            android:layout_marginLeft="15dp" />
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/ic_more_vert_black" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/ic_more_vert_black"
+            android:layout_marginLeft="15dp" />
 
     </androidx.appcompat.widget.Toolbar>
 
