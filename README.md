@@ -14,7 +14,9 @@
 
 ## Screenshots with description
 
-After opening the application, you will find the welcome screen that stays in for 3 seconds. Then phone number verification screen will be displayed where user can enter phone number to verify the phone number's validity. On click of Next button, OTP verification screen appears and the user receives OTP code through sms. The user can enter the OTP code and submit the OTP.
+After opening the application, you will find the welcome screen that stays in for 3 seconds. Then phone number verification screen will be displayed where user can enter phone number to verify the phone number's validity. 
+
+On click of Next button, OTP verification screen appears and the user receives OTP code through sms. The user can enter the OTP code and submit the OTP.
 
 |**Welcome screen**|**Phone number verify screen**|**OTP verification screen**|
 |:---|:--|:--|
@@ -22,7 +24,9 @@ After opening the application, you will find the welcome screen that stays in fo
 
 <br/><br/>
 
-After successful OTP verification, Profile screen appears where the user can enter their details such as name, status and profile photo. Then then Main Home Screen of WhatsApp is displayed which consists of tab layout and fragments namely "Camera", "Chats", "Status" and "Calls". When the user click on any of the chat, its respective Chat screen will appear. Using Chat screen, the user can send and receive messages.
+After successful OTP verification, Profile screen appears where the user can enter their details such as name, status and profile photo. 
+
+Then Main Home Screen of WhatsApp is displayed which consists of tab layout and fragments namely "Camera", "Chats", "Status" and "Calls". When the user click on any of the chat, its respective Chat screen will appear. Using Chat screen, the user can send and receive messages.
 
 |**Profile screen**|**Main Home screen**|**Chat screen**|
 |:---|:--|:--|
