@@ -34,7 +34,7 @@ After successful OTP verification, Profile screen appears where the user can ent
 |:---|:--|
 |<img src=Images/whatsapp_settings.jpg height="500px"/>|<img src=Images/whatsapp_notification.jpg height="500px"/>|
 
-<br><br/>
+<br/><br/>
 
 |**Account setting screen**|**FAQ Screen**|
 |:--|:--|
@@ -42,13 +42,11 @@ After successful OTP verification, Profile screen appears where the user can ent
 
 
 ### Team 
-### | Sai Krishna      | Arbeena Khanum     | Gourav Guru    | Shivaraj Kumar Jane|
+### | Sai Krishna      | Arbeena Khanum     | Gourav Guru    | Shivaraj Kumar Jane |
 -----------------------------------------------------------------------------------------------------------------------------------
 ### |https://github.com/krishnakorukanti | https://github.com/ArbeenaKhanum | https://github.com/gour-av | https://github.com/Shivaraj44
 ------------------------------------------------------------------------------------------------------------------------------------
 
----
-
 ### WhatsApp clone **[Video](https://drive.google.com/file/d/138oK7YGqUUi_bd_ETYPsxw1ViGuUJ_5h/view)**
-
+---
 ### check our blog here : https://crishnakorukanti.medium.com/story-of-team-cupcake-to-build-whatsapp-clone-14524cd191ac
