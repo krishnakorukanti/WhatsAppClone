@@ -34,6 +34,10 @@ Then Main Home Screen of WhatsApp is displayed which consists of tab layout and 
 
 <br/><br/>
 
+On click of menu button at the right corner of the main home screen, Settings screen will open. It contains the username or phone number, user status and user profile photo. Settings consists of list of all the settings features such as accounts, chats, notifications, data & storage usage and help settings.
+
+An option "Invite a friend" is also available using which the user can send a link to friend via list of apps in order to download the app.
+
 |**Settings screen**|**Notification screen**|
 |:---|:--|
 |<img src=Images/whatsapp_settings.jpg height="500px"/>|<img src=Images/whatsapp_notification.jpg height="500px"/>|
@@ -48,7 +52,7 @@ Then Main Home Screen of WhatsApp is displayed which consists of tab layout and 
 ### Team 
 ### | Sai Krishna      | Arbeena Khanum     | Gourav Guru    | Shivaraj Kumar Jane |
 -----------------------------------------------------------------------------------------------------------------------------------
-### |https://github.com/krishnakorukanti | https://github.com/ArbeenaKhanum | https://github.com/gour-av | https://github.com/Shivaraj44
+### | https://github.com/krishnakorukanti | https://github.com/ArbeenaKhanum | https://github.com/gour-av | https://github.com/Shivaraj44
 ------------------------------------------------------------------------------------------------------------------------------------
 
 ### WhatsApp clone **[Video](https://drive.google.com/file/d/138oK7YGqUUi_bd_ETYPsxw1ViGuUJ_5h/view)**
