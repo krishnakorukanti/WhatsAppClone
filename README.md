@@ -36,7 +36,7 @@ Then Main Home Screen of WhatsApp is displayed which consists of tab layout and 
 
 On click of menu button at the right corner of the main home screen, Settings screen will open. It contains the username or phone number, user status and user profile photo. Settings consists of list of all the settings features such as accounts, chats, notifications, data & storage usage and help settings.
 
-An option "Invite a friend" is also available using which the user can send a link to friend via list of apps in order to download the app.
+An option "Invite a friend" is also available using which the user can send a link to a friend in order to download the app via an option to choose from list of apps.
 
 |**Settings screen**|**Notification screen**|
 |:---|:--|
